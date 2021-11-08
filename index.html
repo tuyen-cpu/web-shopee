@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+
     <!-- <link rel="stylesheet" href="./assets/fonts/fontawesome-free-5.15.4-web/css/all.min.css"> -->
 
     <link href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" rel="stylesheet">
@@ -19,8 +22,8 @@
 <body>
     <div class="app">
         <header class="header">
-            <div class="grid">
-                <nav class="header__navbar">
+            <div class="grid wide">
+                <nav class="header__navbar hide-on-mobile-tablet">
                     <ul class="header__navbar-list">
                         <li class="header__navbar-item header__navbar--has-qr header__navbar-item--separate">
                             Vào cửa hàng trên ứng dụng F8-Shop
@@ -180,7 +183,10 @@
                     </ul>
                 </nav>
                 <div class="header-with-search">
-                    <div class="header__logo">
+                    <label for="header__mobile-search-checkbox" class="header__mobile-search">
+                        <i class="header__mobile-search-icon fal fa-search"></i>
+                    </label>
+                    <div class="header__logo hide-on-tablet">
                         <a href="#" class="header__logo-link">
                             <svg class="header__logo-img" viewBox="0 0 192 65">
                             <g fill-rule="evenodd">
@@ -189,6 +195,7 @@
                         </svg>
                         </a>
                     </div>
+                    <input type="checkbox" hidden id="header__mobile-search-checkbox" class="header__search-checkbox">
                     <div class="header__search">
                         <div class="header_search-input-wrap">
                             <input type="text" class="header__search-input" placeholder="Nhập để tìm kiếm">
@@ -366,11 +373,24 @@
                     </div>
                 </div>
             </div>
-
+            <ul class="header__sort-bar">
+                <li class="header__sort-item header__sort-item--active">
+                    <a href="" class="header__sort-link">Liên quan</a>
+                </li>
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-link">Mới nhất</a>
+                </li>
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-link">Bán chạy</a>
+                </li>
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-link">Giá</a>
+                </li>
+            </ul>
         </header>
 
         <div class="app__container">
-            <div class="grid">
+            <div class="grid wide">
                 <div class="grid__row app__content">
                     <div class="grid__col-2">
                         <nav class="category">
@@ -389,7 +409,7 @@
                         </nav>
                     </div>
                     <div class="grid__col-10">
-                        <div class="home-filter">
+                        <div class="home-filter hide-on-mobile-tablet">
                             <span class="home-filter__label">
                                 Sắp xếp theo
                             </span>
@@ -830,7 +850,7 @@
         </div>
 
         <footer class="footer">
-            <div class="grid">
+            <div class="grid wide">
                 <div class="grid__row">
 
                     <div class="grid__col-2-4">
@@ -911,7 +931,7 @@
 
             </div>
             <div class="footer__bottom">
-                <div class="grid">
+                <div class="grid wide">
                     <p class="footer__text">Trần Quang Tuyền</p>
                 </div>
             </div>
